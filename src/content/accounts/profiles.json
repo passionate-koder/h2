@@ -1,0 +1,112 @@
+{
+  "student": {
+    "_id": "6abe59c884166ccc81aad7ea",
+    "created_at": "2026-10-01T13:02:00.565000Z",
+    "updated_at": "2026-10-01T13:02:00.565000Z",
+    "uid": "Xmzoh4w2bEW7bu5NQII63oWj5SD3",
+    "tenant_id": "global",
+    "full_name": "Shivam Raj",
+    "email": "taheba9671@bitproy.com",
+    "phone_number": "+919060585751",
+    "gender": "male",
+    "links": {
+      "github": null,
+      "linkedin": null,
+      "twitter": null,
+      "facebook": null,
+      "instagram": null,
+      "other": null
+    },
+    "profile_type": "student",
+    "category": "public",
+    "is_verified": true,
+    "is_suspended": false,
+    "resume_url": "",
+    "city": {
+      "id": 1277333,
+      "name": "Bengaluru",
+      "state": "Karnataka",
+      "country": "India",
+      "country_code": "IN",
+      "coordinates": [
+        77.59369,
+        12.97194
+      ]
+    },
+    "communication_preferences": {
+      "transactional": true,
+      "promotional": true
+    },
+    "permissions": [],
+    "student_details": {
+      "college_name": "GMRIT",
+      "college_city": "Hyderabad",
+      "year_of_study": 4,
+      "degree_name": "B.Tech Computer Science",
+      "year_of_graduation": 2027,
+      "skills": []
+    },
+    "working_professional_details": null
+  },
+  "professional": {
+    "_id": "6abe5ad87df522bb370647a9",
+    "created_at": "2026-10-01T13:06:32.333000Z",
+    "updated_at": "2026-10-01T13:06:32.333000Z",
+    "uid": "QJDjZNoQfgSvGHh8wkiPmDrABbc2",
+    "tenant_id": "global",
+    "full_name": "Swaraj Kumar Sahu",
+    "email": "tadijax798@deertees.com",
+    "phone_number": "+919060585751",
+    "gender": "male",
+    "links": {
+      "github": null,
+      "linkedin": null,
+      "twitter": null,
+      "facebook": null,
+      "instagram": null,
+      "other": null
+    },
+    "profile_type": "working_professional",
+    "category": "public",
+    "is_verified": true,
+    "is_suspended": false,
+    "resume_url": "",
+    "city": {
+      "id": 1277333,
+      "name": "Bengaluru",
+      "state": "Karnataka",
+      "country": "India",
+      "country_code": "IN",
+      "coordinates": [
+        77.59369,
+        12.97194
+      ]
+    },
+    "communication_preferences": {
+      "transactional": true,
+      "promotional": true
+    },
+    "permissions": [],
+    "student_details": null,
+    "working_professional_details": {
+      "professional_type": "startup",
+      "startup_details": {
+        "startup_name": "ABCD",
+        "role": null,
+        "startup_website": "",
+        "industry_specializations": [],
+        "elevator_pitch": "",
+        "work_experience": [],
+        "skills": []
+      },
+      "corporate_details": null,
+      "self_employed_details": null,
+      "venture_capitalist_details": null,
+      "investor_details": null,
+      "accelerator_details": null,
+      "university_details": null,
+      "non_profit_details": null,
+      "government_details": null
+    }
+  }
+}

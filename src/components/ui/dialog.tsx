@@ -1,0 +1,21 @@
+"use client";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { X } from "lucide-react";
+import type { ReactNode } from "react";
+export const Dialog = DialogPrimitive.Root;
+export const DialogTrigger = DialogPrimitive.Trigger;
+export const DialogTitle = DialogPrimitive.Title;
+export const DialogDescription = DialogPrimitive.Description;
+export function DialogContent({ children }: { children: ReactNode }) {
+  return (
+    <DialogPrimitive.Portal>
+      <DialogPrimitive.Overlay className="hc-dialog-overlay" />
+      <DialogPrimitive.Content className="hc-dialog-content">
+        {children}
+        <DialogPrimitive.Close className="hc-dialog-close" aria-label="Close">
+          <X size={20} />
+        </DialogPrimitive.Close>
+      </DialogPrimitive.Content>
+    </DialogPrimitive.Portal>
+  );
+}

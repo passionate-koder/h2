@@ -1,0 +1,22 @@
+{
+  "student": [
+    {
+      "id": "6abea73f7df522bb370647c6",
+      "slug": "code-for-communities-chandigarh",
+      "name": "Code for Communities Chandigarh",
+      "registeredAt": "2026-10-01T18:32:31.603000Z",
+      "answers": {},
+      "status": "registered"
+    }
+  ],
+  "professional": [
+    {
+      "id": "6abea79ea3971421edf56146",
+      "slug": "code-for-communities-chandigarh",
+      "name": "Code for Communities Chandigarh",
+      "registeredAt": "2026-10-01T18:34:06.559000Z",
+      "answers": {},
+      "status": "registered"
+    }
+  ]
+}

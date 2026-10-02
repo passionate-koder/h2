@@ -1,0 +1,325 @@
+.hc-dashboard {
+  padding-top: 56px;
+  background: #f6f5ed;
+  min-height: 100vh;
+}
+.hc-dashboard [data-dashboard-sidebar] {
+  top: 56px;
+}
+.hc-dashboard main {
+  padding-top: 0;
+}
+.hc-dashboard > div.min-h-screen {
+  min-height: calc(100vh - 56px);
+}
+.program-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.program-record {
+  display: flex;
+  background: #f6f5ed;
+}
+.program-record .program-record-cover {
+  position: relative;
+  width: 48%;
+  padding: 0;
+  flex-shrink: 0;
+}
+.program-record-cover img {
+  height: 100%;
+  object-fit: cover;
+}
+.program-record-cover small {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: #fff;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+.program-record .program-record-body {
+  padding: 20px;
+  min-width: 0;
+  flex: 1;
+}
+.program-record-title {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.program-record-title h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  flex: 1;
+}
+.program-record-title .program-status {
+  flex-shrink: 0;
+}
+.program-record-body p {
+  white-space: nowrap;
+}
+.program-record-body a {
+  margin-top: 22px;
+  font-weight: 600;
+}
+.program-pagination {
+  background: #f6f5ed;
+  border: 1px solid #dedfd2;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+.program-tools {
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.program-tools > input {
+  max-width: 260px;
+  flex: none;
+  height: 36px;
+  font-size: 14px;
+}
+.program-tools > svg {
+  display: none;
+}
+.program-tools > button {
+  font-size: 14px;
+  padding: 7px 10px;
+}
+.program-tools > button:nth-last-child(2) {
+  margin-left: auto;
+}
+.program-filter-panel {
+  padding: 16px;
+  border: 1px solid #dedfd2;
+  border-radius: 8px;
+}
+.program-records {
+  padding-top: 24px;
+}
+.dashboard-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #fff;
+  padding: 16px;
+  border: 1px solid #dedfd2;
+  box-shadow: 0 4px 20px #0002;
+  z-index: 100;
+}
+.dashboard-backdrop {
+  position: fixed;
+  inset: 56px 0 0;
+  background: #0005;
+  z-index: 45;
+}
+.program-tools {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.program-tools input {
+  flex: 1;
+  min-width: 180px;
+}
+.program-tools input,
+.program-tools button,
+.program-tools select {
+  border: 1px solid #dedfd2;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: #fff;
+}
+.program-tools button[aria-pressed="true"] {
+  background: #edf3e9;
+  color: #21634b;
+}
+.program-records {
+  max-width: 1280px;
+  margin: auto;
+  padding: 32px;
+}
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.program-record {
+  border: 1px solid #dedfd2;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+.program-record img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.program-record > div {
+  padding: 20px;
+}
+.program-record h2 {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0;
+}
+.program-record p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 10px 0;
+}
+.program-record a {
+  display: block;
+  text-align: center;
+  border-radius: 7px;
+  background: #21634b;
+  color: #fff;
+  padding: 10px;
+  margin-top: 18px;
+}
+.program-status {
+  border-radius: 12px;
+  background: #e8faf1;
+  color: #16844b;
+  padding: 4px 9px;
+  font-size: 12px;
+}
+.program-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  color: #64748b;
+  font-size: 14px;
+}
+.program-pagination button {
+  padding: 8px 12px;
+  border: 1px solid #dedfd2;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+.program-table-wrap {
+  overflow: auto;
+}
+.program-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.program-table td,
+.program-table th {
+  text-align: left;
+  padding: 18px;
+  border-bottom: 1px solid #dedfd2;
+}
+.program-table a {
+  color: #21634b;
+}
+.program-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.program-record {
+  background: #f6f5ed;
+}
+.program-records {
+  padding-top: 24px;
+}
+.program-tools {
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.program-tools > input {
+  flex: none;
+}
+.program-record-title h2 {
+  margin: 0;
+}
+.program-record-body a {
+  margin-top: 22px;
+}
+.program-tools > input {
+  width: 260px;
+}
+.program-tools > button {
+  padding: 7px 10px;
+  height: 36px;
+}
+.program-pagination {
+  margin-top: 16px;
+}
+.program-pagination button {
+  padding: 5px 10px;
+}
+.program-record-cover:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, #0000 40%, #0005);
+  pointer-events: none;
+}
+.program-record-cover small {
+  z-index: 1;
+}
+.program-record .program-record-cover img {
+  height: 160px;
+}
+.program-record-body p {
+  margin: 8px 0;
+}
+.account-programs-hero h1,
+.account-programs-hero p {
+  font-family: var(--font-inter), Arial, sans-serif;
+}
+@media (min-width: 1024px) {
+  .hc-dashboard.sidebar-open [data-dashboard-sidebar] {
+    transform: translateX(-100%);
+  }
+  .hc-dashboard.sidebar-open main {
+    margin-left: 0;
+  }
+  .hc-dashboard.sidebar-open .dashboard-backdrop {
+    display: none;
+  }
+  .dashboard-expand {
+    position: fixed;
+    top: 60px;
+    left: 4px;
+    z-index: 60;
+    background: white;
+    padding: 8px;
+    border: 1px solid #dedfd2;
+    border-radius: 4px;
+  }
+}
+@media (max-width: 1023px) {
+  .hc-dashboard.sidebar-open [data-dashboard-sidebar] {
+    translate: 0 !important;
+    transform: translateX(0) !important;
+  }
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-expand {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+  .program-records {
+    padding: 20px 16px;
+  }
+  .program-pagination {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .hc-dashboard main {
+    overflow-x: hidden;
+  }
+}

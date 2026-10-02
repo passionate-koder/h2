@@ -1,0 +1,273 @@
+[
+  {
+    "slug": "code-for-communities-chandigarh",
+    "name": "Code for Communities Chandigarh",
+    "tagline": "Google for Developers supported hack",
+    "color": "#0b5eb7",
+    "participants": 49,
+    "open": true,
+    "questions": [
+      {
+        "id": "1790582559830",
+        "type": "text",
+        "label": "WhatsApp Number",
+        "description": null,
+        "required": true,
+        "options": [],
+        "media": null,
+        "order": 0,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1790582589775",
+        "type": "text",
+        "label": "Current Address",
+        "description": null,
+        "required": false,
+        "options": [],
+        "media": null,
+        "order": 1,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1790582659239",
+        "type": "select",
+        "label": "Occupation",
+        "description": null,
+        "required": true,
+        "options": [
+          "Professional",
+          "Student",
+          "Startup",
+          "Freelancer",
+          "Researcher"
+        ],
+        "media": null,
+        "order": 2,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1790582687474",
+        "type": "text",
+        "label": "Company Name (in case of professionals)",
+        "description": null,
+        "required": false,
+        "options": [],
+        "media": null,
+        "order": 3,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1790582760255",
+        "type": "text",
+        "label": "Years of Experience ",
+        "description": null,
+        "required": false,
+        "options": [],
+        "media": null,
+        "order": 4,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1790582737590",
+        "type": "url",
+        "label": "LinkedIn Profile",
+        "description": null,
+        "required": false,
+        "options": [],
+        "media": null,
+        "order": 5,
+        "get_from_profile_key": "links.linkedin"
+      },
+      {
+        "id": "1790678499524",
+        "type": "file",
+        "label": "Upload screenshot of MLH registered page",
+        "description": "For being part of Hacktoberfest by MLH it is mandatory to register on MLH platform.\nPlease register at https://events.mlh.com/events/14974-hacktoberfest-hack-day-x-gdg-cloud-chandigarh and upload your **Registered to attend** page screenshot",
+        "required": true,
+        "options": [],
+        "media": null,
+        "order": 7,
+        "get_from_profile_key": null
+      }
+    ]
+  },
+  {
+    "slug": "hackcbs-9-0",
+    "name": "hackCBS 9.0",
+    "tagline": "India's Largest Student-run Hackathon",
+    "color": "#222222",
+    "participants": 569,
+    "open": true,
+    "questions": [
+      {
+        "id": "1789646015321",
+        "type": "text",
+        "label": "Age",
+        "description": null,
+        "required": true,
+        "options": [],
+        "media": null,
+        "order": 4,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1789646185709",
+        "type": "text",
+        "label": "City",
+        "description": "The city you will be traveling from to attend hackCBS.",
+        "required": true,
+        "options": [],
+        "media": null,
+        "order": 6,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1789646244189",
+        "type": "text",
+        "label": "Country of Residence",
+        "description": null,
+        "required": true,
+        "options": [],
+        "media": null,
+        "order": 7,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1789646488377",
+        "type": "text",
+        "label": "College/ University Name",
+        "description": null,
+        "required": true,
+        "options": [],
+        "media": null,
+        "order": 8,
+        "get_from_profile_key": "student_details.college_name"
+      },
+      {
+        "id": "1789646637477",
+        "type": "select",
+        "label": "Current Level of Study",
+        "description": null,
+        "required": true,
+        "options": [
+          "Undergraduate",
+          "Postgraduate",
+          "Secondary/High School",
+          "Recent Graduate"
+        ],
+        "media": null,
+        "order": 9,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1789646666807",
+        "type": "textarea",
+        "label": "Hacker Bio",
+        "description": null,
+        "required": false,
+        "options": [],
+        "media": null,
+        "order": 10,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1789646747230",
+        "type": "file",
+        "label": "Résumé",
+        "description": null,
+        "required": true,
+        "options": [],
+        "media": null,
+        "order": 11,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1789646824977",
+        "type": "textarea",
+        "label": "Prior Work/ Internship Experience",
+        "description": null,
+        "required": false,
+        "options": [],
+        "media": null,
+        "order": 12,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1789647302362",
+        "type": "url",
+        "label": "GitHub Profile Link",
+        "description": null,
+        "required": true,
+        "options": [],
+        "media": null,
+        "order": 14,
+        "get_from_profile_key": "links.github"
+      },
+      {
+        "id": "1789647335914",
+        "type": "url",
+        "label": "Linkedin Profile Link",
+        "description": null,
+        "required": true,
+        "options": [],
+        "media": null,
+        "order": 15,
+        "get_from_profile_key": "links.linkedin"
+      },
+      {
+        "id": "1789647380156",
+        "type": "url",
+        "label": "Twitter/ X Profile Link",
+        "description": null,
+        "required": false,
+        "options": [],
+        "media": null,
+        "order": 16,
+        "get_from_profile_key": "links.twitter"
+      },
+      {
+        "id": "1790702878899",
+        "type": "radio",
+        "label": "I have read and agree to the MLH Code of Conduct",
+        "description": "\n\nhttps://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md",
+        "required": true,
+        "options": [
+          "Yes",
+          "No"
+        ],
+        "media": null,
+        "order": 17,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1790703150141",
+        "type": "radio",
+        "label": "I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the MLH Privacy Policy. I further agree to the terms of both the MLH Contest Terms and Conditions and the MLH Privacy Policy",
+        "description": "\n\nMLH Privacy Policy (https://github.com/MLH/mlh-policies/blob/main/privacy-policy.md). \n\nMLH Contest Terms and Conditions (https://github.com/MLH/mlh-policies/blob/main/contest-terms.md) \n\nMLH Privacy Policy (https://github.com/MLH/mlh-policies/blob/main/privacy-policy.md).",
+        "required": true,
+        "options": [
+          "Yes",
+          "No"
+        ],
+        "media": null,
+        "order": 18,
+        "get_from_profile_key": null
+      },
+      {
+        "id": "1790703318341",
+        "type": "radio",
+        "label": "I authorize MLH to send me occasional emails about relevant events, career opportunities, and community announcements.",
+        "description": null,
+        "required": true,
+        "options": [
+          "Yes",
+          "No"
+        ],
+        "media": null,
+        "order": 19,
+        "get_from_profile_key": null
+      }
+    ]
+  }
+]

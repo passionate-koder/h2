@@ -1,0 +1,377 @@
+[
+  {
+    "route": "/programs",
+    "file": "programs",
+    "title": "Explore Programs | Buildora"
+  },
+  {
+    "route": "/offerings",
+    "file": "offerings",
+    "title": "Buildora - Organize Hackathons, Innovation Challenge, Hiring Hackathon and Startup Challenge"
+  },
+  {
+    "route": "/offerings/corporate-innovation-programs",
+    "file": "offerings__corporate-innovation-programs",
+    "title": "Corporate Innovation Programs | Buildora"
+  },
+  {
+    "route": "/",
+    "file": "home",
+    "title": "Buildora - Organize Hackathons, Innovation Challenge, Hiring Hackathon and Startup Challenge"
+  },
+  {
+    "route": "/offerings/internal-hackathons",
+    "file": "offerings__internal-hackathons",
+    "title": "Internal Hackathons | Buildora"
+  },
+  {
+    "route": "/offerings/ai-capacity-building",
+    "file": "offerings__ai-capacity-building",
+    "title": "AI Capacity Building | Buildora"
+  },
+  {
+    "route": "/offerings/innovation-hackathons",
+    "file": "offerings__innovation-hackathons",
+    "title": "Innovation Hackathons | Buildora"
+  },
+  {
+    "route": "/offerings/hiring-hackathons-employer-branding",
+    "file": "offerings__hiring-hackathons-employer-branding",
+    "title": "Hiring Hackathons & Employer Branding | Buildora"
+  },
+  {
+    "route": "/legal/terms-and-conditions",
+    "file": "legal__terms-and-conditions",
+    "title": "Buildora - Organize Hackathons, Innovation Challenge, Hiring Hackathon and Startup Challenge"
+  },
+  {
+    "route": "/legal/privacy-policy",
+    "file": "legal__privacy-policy",
+    "title": "Buildora - Organize Hackathons, Innovation Challenge, Hiring Hackathon and Startup Challenge"
+  },
+  {
+    "route": "/blog",
+    "file": "blog",
+    "title": "Blog | Buildora"
+  },
+  {
+    "route": "/our-clientele",
+    "file": "our-clientele",
+    "title": "Our Clientele | Buildora"
+  },
+  {
+    "route": "/auth",
+    "file": "auth",
+    "title": "Buildora - Organize Hackathons, Innovation Challenge, Hiring Hackathon and Startup Challenge"
+  },
+  {
+    "route": "/hackathons/sarvam-campus-nit-trichy",
+    "file": "hackathons__sarvam-campus-nit-trichy",
+    "title": "Sarvam Campus '26 | Buildora"
+  },
+  {
+    "route": "/hackathons/code-for-communities-chandigarh",
+    "file": "hackathons__code-for-communities-chandigarh",
+    "title": "Code for Communities Chandigarh | Buildora"
+  },
+  {
+    "route": "/hackathons/sarvam-campus-srmist",
+    "file": "hackathons__sarvam-campus-srmist",
+    "title": "Sarvam Campus '26 | Buildora"
+  },
+  {
+    "route": "/hackathons/agents-that-act",
+    "file": "hackathons__agents-that-act",
+    "title": "Agents That Act | Buildora"
+  },
+  {
+    "route": "/hackathons/sarvam-campus-iit-madras",
+    "file": "hackathons__sarvam-campus-iit-madras",
+    "title": "Sarvam Campus '26 | Buildora"
+  },
+  {
+    "route": "/hackathons/hackcbs-9-0",
+    "file": "hackathons__hackcbs-9-0",
+    "title": "hackCBS 9.0 | Buildora"
+  },
+  {
+    "route": "/hackathons/paytm-ai-hackathon-hyderabad",
+    "file": "hackathons__paytm-ai-hackathon-hyderabad",
+    "title": "Build for India AI Hackathon | Buildora"
+  },
+  {
+    "route": "/hackathons/code-cubicle-6-0",
+    "file": "hackathons__code-cubicle-6-0",
+    "title": "Code Cubicle 6.0 | Buildora"
+  },
+  {
+    "route": "/hackathons/feg-innovation-hackathon-2026-finalists",
+    "file": "hackathons__feg-innovation-hackathon-2026-finalists",
+    "title": "FEG Innovation Hackathon 2026 | Buildora"
+  },
+  {
+    "route": "/hackathons/buildverse-hackathon",
+    "file": "hackathons__buildverse-hackathon",
+    "title": "BUILDVERSE | Buildora"
+  },
+  {
+    "route": "/hackathons/sarvam-buildin-hours",
+    "file": "hackathons__sarvam-buildin-hours",
+    "title": "Sarvam BuildIn' Hours | Buildora"
+  },
+  {
+    "route": "/hackathons/databricks-campus-hackathon-bmsce",
+    "file": "hackathons__databricks-campus-hackathon-bmsce",
+    "title": "BMSCE Edition | Databricks Campus Hackathon | Buildora"
+  },
+  {
+    "route": "/hackathons/databricks-campus-hackathon-rvce",
+    "file": "hackathons__databricks-campus-hackathon-rvce",
+    "title": "RVCE Edition | Databricks Campus Hackathon | Buildora"
+  },
+  {
+    "route": "/hackathons/MUJ-Hackx4.0",
+    "file": "hackathons__MUJ-Hackx4.0",
+    "title": "MUJ HackX 4.0 | Buildora"
+  },
+  {
+    "route": "/hackathons/build-with-bharat-2-0",
+    "file": "hackathons__build-with-bharat-2-0",
+    "title": "Build With Bharat 2.0 | Buildora"
+  },
+  {
+    "route": "/hackathons/cimet-ai-hiring-hackathon-2026",
+    "file": "hackathons__cimet-ai-hiring-hackathon-2026",
+    "title": "CIMET AI Hiring Hackathon 2026 | Buildora"
+  },
+  {
+    "route": "/hackathons/x402-global-challenge-prehack",
+    "file": "hackathons__x402-global-challenge-prehack",
+    "title": "x402 Global Challenge PreHack | Buildora"
+  },
+  {
+    "route": "/hackathons/forge-the-future-hackathon-2026",
+    "file": "hackathons__forge-the-future-hackathon-2026",
+    "title": "FORGE THE FUTURE 2026 | Buildora"
+  },
+  {
+    "route": "/hackathons/bessemer-tech-catalyst",
+    "file": "hackathons__bessemer-tech-catalyst",
+    "title": "Bessemer Tech Catalyst | Buildora"
+  },
+  {
+    "route": "/hackathons/nabard-hackathon-gff-2026",
+    "file": "hackathons__nabard-hackathon-gff-2026",
+    "title": "NABARD Hackathon @ GFF 2026 | Buildora"
+  },
+  {
+    "route": "/hackathons/electronica-india-tech-challenge-2026",
+    "file": "hackathons__electronica-india-tech-challenge-2026",
+    "title": "electronica India Tech Challenge | Buildora"
+  },
+  {
+    "route": "/hackathons/zero-to-one",
+    "file": "hackathons__zero-to-one",
+    "title": "ZERO TO ONE AI Hackathon | Buildora"
+  },
+  {
+    "route": "/hackathons/sebi-securities-market-techsprint",
+    "file": "hackathons__sebi-securities-market-techsprint",
+    "title": "Securities Market TechSprint @ GFF 2026 | Buildora"
+  },
+  {
+    "route": "/hackathons/trackshift-2026",
+    "file": "hackathons__trackshift-2026",
+    "title": "TrackShift Innovation Challenge | Buildora"
+  },
+  {
+    "route": "/hackathons/ai-vibe-sprint-jakarta",
+    "file": "hackathons__ai-vibe-sprint-jakarta",
+    "title": "AI Vibe Sprint Jakarta | Buildora"
+  },
+  {
+    "route": "/hackathons/ai-vibe-sprint-bengaluru-2026",
+    "file": "hackathons__ai-vibe-sprint-bengaluru-2026",
+    "title": "AI Vibe Sprint Bengaluru | Buildora"
+  },
+  {
+    "route": "/hackathons/sbi-hackathon-gff-2026",
+    "file": "hackathons__sbi-hackathon-gff-2026",
+    "title": "SBI Hackathon @ GFF 2026 | Buildora"
+  },
+  {
+    "route": "/hackathons/ai-vibe-sprint-delhi-ncr-2026",
+    "file": "hackathons__ai-vibe-sprint-delhi-ncr-2026",
+    "title": "AI Vibe Sprint Delhi NCR 2026 | Buildora"
+  },
+  {
+    "route": "/hackathons/mphasis-hiring-hackathon",
+    "file": "hackathons__mphasis-hiring-hackathon",
+    "title": "Mphasis Hiring Hackathon | Buildora"
+  },
+  {
+    "route": "/hackathons/paytm-ai-hackathon",
+    "file": "hackathons__paytm-ai-hackathon",
+    "title": "Build for India AI Hackathon | Buildora"
+  },
+  {
+    "route": "/hackathons/ai-for-good-hackathon-2nd-edition",
+    "file": "hackathons__ai-for-good-hackathon-2nd-edition",
+    "title": "AI FOR GOOD 2.0 | Buildora"
+  },
+  {
+    "route": "/hackathons/vibecon",
+    "file": "hackathons__vibecon",
+    "title": "VibeCon | Buildora"
+  },
+  {
+    "route": "/hackathons/incubation-program-for-mobility-startups",
+    "file": "hackathons__incubation-program-for-mobility-startups",
+    "title": "Maruti Suzuki Mobility Startups Program  | Buildora"
+  },
+  {
+    "route": "/hackathons/lyzr-agentathon-2026",
+    "file": "hackathons__lyzr-agentathon-2026",
+    "title": "Lyzr Agentathon 2026 | Buildora"
+  },
+  {
+    "route": "/hackathons/petrochemical-innovation-challenge",
+    "file": "hackathons__petrochemical-innovation-challenge",
+    "title": "HMEL Innovation Challenge | Buildora"
+  },
+  {
+    "route": "/hackathons/genai-filmmaking-hackathon",
+    "file": "hackathons__genai-filmmaking-hackathon",
+    "title": "GenAI Filmmaking Hackathon | Buildora"
+  },
+  {
+    "route": "/hackathons/ai-ad-making-hackathon-cinic-x-beyond-building",
+    "file": "hackathons__ai-ad-making-hackathon-cinic-x-beyond-building",
+    "title": "AI Ad Making Hackathon | CINIC x Beyond Building | Buildora"
+  },
+  {
+    "route": "/hackathons/gitagent-hackathon",
+    "file": "hackathons__gitagent-hackathon",
+    "title": "GitAgent Hackathon | Buildora"
+  },
+  {
+    "route": "/hackathons/hyperapi-hackathon",
+    "file": "hackathons__hyperapi-hackathon",
+    "title": "HyperAPI Hackathon | Buildora"
+  },
+  {
+    "route": "/hackathons/bmu-innovation-challenge",
+    "file": "hackathons__bmu-innovation-challenge",
+    "title": "BMU Innovation Challenge | Buildora"
+  },
+  {
+    "route": "/hackathons/vibecon-india",
+    "file": "hackathons__vibecon-india",
+    "title": "VibeCon India | Buildora"
+  },
+  {
+    "route": "/hackathons/feuji-innovation-challenge",
+    "file": "hackathons__feuji-innovation-challenge",
+    "title": "Feuji Innovation Challenge 2026 | Buildora"
+  },
+  {
+    "route": "/hackathons/ekathon-2026",
+    "file": "hackathons__ekathon-2026",
+    "title": "Ekathon 2026 | Buildora"
+  },
+  {
+    "route": "/hackathons/ai-innovation-challenge",
+    "file": "hackathons__ai-innovation-challenge",
+    "title": "AI Innovation Challenge - IV (Phase I) | Buildora"
+  },
+  {
+    "route": "/hackathons/cine-ai-hackfest",
+    "file": "hackathons__cine-ai-hackfest",
+    "title": "Cine AI Hackfest | Buildora"
+  },
+  {
+    "route": "/hackathons/portkey-ai-builder-challenge",
+    "file": "hackathons__portkey-ai-builder-challenge",
+    "title": "Portkey AI Builders Challenge | Buildora"
+  },
+  {
+    "route": "/hackathons/ai-for-good-challenge",
+    "file": "hackathons__ai-for-good-challenge",
+    "title": "AI for Good Challenge  | Buildora"
+  },
+  {
+    "route": "/hackathons/vibehack-2025",
+    "file": "hackathons__vibehack-2025",
+    "title": "VibeHack 2025 | Buildora"
+  },
+  {
+    "route": "/hackathons/trackshift-innovation-challenge-1",
+    "file": "hackathons__trackshift-innovation-challenge-1",
+    "title": "TrackShift Innovation Challenge | Buildora"
+  },
+  {
+    "route": "/hackathons/shebuilds-2025",
+    "file": "hackathons__shebuilds-2025",
+    "title": "SheBuilds'2025 | Buildora"
+  },
+  {
+    "route": "/blog/women-in-tech-building-the-future-shebuilds-2025",
+    "file": "blog__women-in-tech-building-the-future-shebuilds-2025",
+    "title": "SheBuilds 2025: Women-Led Hackathon by VLIV and Buildora"
+  },
+  {
+    "route": "/blog/gromo-ai-hackathon-recap-16-prototypes-3-now-scaling",
+    "file": "blog__gromo-ai-hackathon-recap-16-prototypes-3-now-scaling",
+    "title": "GroMo AI Hackathon Recap: 16 Prototypes, 3 Scaling Solutions"
+  },
+  {
+    "route": "/blog/great-bengaluru-hackathon-2025-success-story",
+    "file": "blog__great-bengaluru-hackathon-2025-success-story",
+    "title": "Great Bengaluru Hackathon 2025: Success Story & Innovation Highlights"
+  },
+  {
+    "route": "/blog/from-code-to-career-hsbc-technology-hiring-hackathon-highlights",
+    "file": "blog__from-code-to-career-hsbc-technology-hiring-hackathon-highlights",
+    "title": "HSBC Technology Hiring Hackathon 2025: From Code to Career Highlights"
+  },
+  {
+    "route": "/blog/2024-innovation-rewind-buildora",
+    "file": "blog__2024-innovation-rewind-buildora",
+    "title": "2024 Innovation Rewind: Buildora's Year of Innovation and Growth"
+  },
+  {
+    "route": "/hackathons/hsbc-technology-india-hackathon-2025",
+    "file": "hackathons__hsbc-technology-india-hackathon-2025",
+    "title": "HSBC Technology India Hackathon 2025 | Buildora"
+  },
+  {
+    "route": "/hackathons/the-great-benguluru-hackathon",
+    "file": "hackathons__the-great-benguluru-hackathon",
+    "title": "The Great Benguluru Hackathon | Buildora"
+  },
+  {
+    "route": "/hackathons/5g-6g-innovation-hackathon-2024",
+    "file": "hackathons__5g-6g-innovation-hackathon-2024",
+    "title": "5G & 6G Innovation Hackathon 2024 | Buildora"
+  },
+  {
+    "route": "/hackathons/vtion-innovate-hackathon",
+    "file": "hackathons__vtion-innovate-hackathon",
+    "title": "VTION INNOVATE HACKATHON | Buildora"
+  },
+  {
+    "route": "/legal/code-of-conduct",
+    "file": "legal__code-of-conduct",
+    "title": "Buildora - Organize Hackathons, Innovation Challenge, Hiring Hackathon and Startup Challenge"
+  },
+  {
+    "route": "/host",
+    "file": "host",
+    "title": "Host Program | Buildora"
+  },
+  {
+    "route": "/auth/reset-password",
+    "file": "auth__reset-password",
+    "title": "Reset password | Buildora"
+  }
+]
