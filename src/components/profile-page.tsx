@@ -117,12 +117,18 @@ export function ProfilePage({
           </Button>
         </div>
         <div className="account-profile-body">
+          {(profile.learnerSegment || profile.careerGoals) && <section aria-label="Learner goals" className="mb-6">
+            <h2>Learner goals</h2>
+            <dl className="grid gap-3 sm:grid-cols-2">
+              {[["Segment", profile.learnerSegment?.replaceAll("_", " ")], ["Education level", profile.educationLevel], ["Experience level", profile.experienceLevel], ["Desired role", profile.desiredRole], ["Industry", profile.desiredIndustry], ["Career goals", profile.careerGoals], ["Availability", profile.availability], ["Interests", profile.interests?.join(", ")]].filter(([, value]) => value).map(([label, value]) => <div key={label}><dt className="font-semibold">{label}</dt><dd>{value}</dd></div>)}
+            </dl>
+          </section>}
           <div className="account-facts">
             {[
               [
                 <UserCircle key="gender" />,
                 "Gender",
-                profile.gender[0].toUpperCase() + profile.gender.slice(1),
+                (profile.gender[0] || "").toUpperCase() + profile.gender.slice(1),
               ],
               [
                 <GraduationCap key="type" />,
@@ -392,7 +398,7 @@ export function ProfilePage({
           </p>
           <div className="account-contact-details">
             <small>EMAIL</small>
-            <a href="/host">Buildora support</a>
+            <Link href="/host">Buildora support</Link>
             <small>PHONE</small>
             <a href="tel:+918121736459">+91 81217 36459</a>
           </div>

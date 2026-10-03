@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { getAccountRole, readAccount } from "@/lib/accounts";
+import { getIdentity, readAccount } from "@/lib/accounts";
 import { OnboardingEditor } from "@/components/onboarding-editor";
 export const metadata = { title: "Edit Profile" };
 export default async function Page({
@@ -7,7 +7,7 @@ export default async function Page({
 }: {
   searchParams: Promise<{ step?: string }>;
 }) {
-  const role = await getAccountRole();
+  const role = await getIdentity();
   if (!role) redirect("/auth?redirect=/onboarding");
   const query = await searchParams;
   return (

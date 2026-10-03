@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { getPage, SitePage, Footer } from "@/lib/content";
 import { AuthForm } from "@/components/auth-form";
+import { identityConfig } from "@/lib/identity/config";
 import routes from "@/content/routes.json";
 type Props = {
   params: Promise<{ slug: string[] }>;
@@ -28,6 +29,7 @@ export default async function Page({ params, searchParams }: Props) {
     return (
       <>
         <AuthForm
+          authMode={identityConfig().mode}
           initialMode={
             route.includes("reset-password")
               ? "reset"

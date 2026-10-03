@@ -26,8 +26,10 @@ export function OnboardingEditor({
 }) {
   const [p, setP] = useState(initialProfile);
   const [step, setStep] = useState(initialStep);
+  const [interests, setInterests] = useState((initialProfile.interests || []).join(", "));
   const [skill, setSkill] = useState("");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const [busy, setBusy] = useState(false);
   const router = useRouter();
   const account = useAccount();
@@ -80,7 +82,7 @@ export function OnboardingEditor({
   ) => (
     <AccountSelect
       label={label}
-      value={String(p[key])}
+      value={String(p[key] || "")}
       options={options}
       required={required}
       onChange={(value) => update(key, value)}
@@ -198,16 +200,19 @@ export function OnboardingEditor({
   async function save(next: number) {
     setBusy(true);
     setError("");
+    setSuccess("");
     try {
       const res = await fetch("/api/profile", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(p),
+        body: JSON.stringify({ ...p, interests: interests.split(",").map(v => v.trim()).filter(Boolean) }),
       });
       const data = await res.json();
       if (!res.ok)
         throw new Error(data.message || "Unable to save your profile.");
       account.setUser(data.user);
+      setP(data.user);
+      setSuccess("Profile saved.");
       if (next > 4) {
         router.push("/profile");
         router.refresh();
@@ -321,6 +326,14 @@ export function OnboardingEditor({
                 )}
                 {field("Phone Number", "phone", "+91", true, "tel")}
                 {field("Current City", "city", "Search your city", true)}
+                {select("Learner segment", "learnerSegment", [["student", "Student"], ["recent_graduate", "Recent graduate"], ["career_switcher", "Career switcher"]])}
+                {field("Education level", "educationLevel", "e.g. Undergraduate")}
+                {field("Experience level", "experienceLevel", "e.g. Entry level")}
+                {field("Desired role", "desiredRole", "e.g. Software engineer")}
+                {field("Desired industry", "desiredIndustry", "e.g. Technology")}
+                {field("Career goals", "careerGoals", "What would you like to achieve?")}
+                {field("Availability", "availability", "e.g. 10 hours per week")}
+                <label className="account-field">Interests (comma separated)<input value={interests} onChange={e => setInterests(e.target.value)} /></label>
               </div>
             )}
             {step === 2 && (
@@ -483,6 +496,7 @@ export function OnboardingEditor({
             )}
             {step === 4 && (
               <div className="account-preferences">
+                {select("Profile visibility", "visibility", [["private", "Private"], ["public", "Public summary"]])}
                 {(["transactional", "promotional"] as const).map((key) => (
                   <label key={key}>
                     <div>
@@ -507,6 +521,7 @@ export function OnboardingEditor({
                 ))}
               </div>
             )}
+            {success && <p role="status">{success}</p>}
             {error && (
               <p role="alert" className="account-error">
                 {error}

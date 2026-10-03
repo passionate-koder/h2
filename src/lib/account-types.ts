@@ -1,5 +1,14 @@
 export type AccountRole = "student" | "professional";
 export type AccountProfile = {
+  learnerSegment?: "student" | "recent_graduate" | "career_switcher";
+  educationLevel?: string;
+  experienceLevel?: string;
+  interests?: string[];
+  desiredRole?: string;
+  desiredIndustry?: string;
+  careerGoals?: string;
+  availability?: string;
+  visibility?: "private" | "public";
   role: AccountRole;
   uid: string;
   email: string;
@@ -38,7 +47,10 @@ export type Registration = {
 };
 export type AccountStore = {
   profile: AccountProfile;
+  history?: LearnerHistory;
   registrations: Registration[];
+  auditEvents?: { id: string; userId: string; action: string; createdAt: string }[];
+  activeRoleAssignmentId?: string;
   hostInquiries?: {
     id: string;
     createdAt: string;
@@ -64,3 +76,12 @@ export type RegistrationProgram = {
   open: boolean;
   questions: RegistrationQuestion[];
 };
+
+export type Education = { id: string; institution: string; qualification: string; startDate?: string; endDate?: string };
+export type Experience = { id: string; organization: string; title: string; startDate?: string; endDate?: string };
+export type Project = { id: string; title: string; description: string; url?: string };
+export type AuditEvent = { id: string; userId: string; action: string; createdAt: string };
+
+export type LearnerHistory = { educations: Education[]; experiences: Experience[]; projects: Project[] };
+export type ProfileVisibility = { visibility: "private" | "public" };
+export type NotificationPreferences = { transactional: boolean; promotional: boolean };

@@ -1,28 +1,20 @@
+import { z } from "zod";
+import { readJson, safeRoute } from "@/lib/identity/http";
 import { NextResponse } from "next/server";
-import { getAccountRole, updateAccount, validOrigin } from "@/lib/accounts";
+import { getIdentity, updateAccount, validOrigin } from "@/lib/accounts";
 import programs from "@/content/accounts/registration-programs.json";
 import { randomUUID } from "node:crypto";
-export async function POST(request: Request) {
-  const role = await getAccountRole();
+async function handler(request: Request) {
+  const role = await getIdentity();
   if (!role)
     return NextResponse.json({ message: "Please sign in." }, { status: 401 });
   if (!validOrigin(request))
     return NextResponse.json({ message: "Invalid request." }, { status: 403 });
-  const data = await request.json().catch(() => null);
-  const program = programs.find((p) => p.slug === data?.slug);
-  if (
-    !program ||
-    !program.open ||
-    !data.consent ||
-    !data.share ||
-    !data.answers ||
-    typeof data.answers !== "object" ||
-    Array.isArray(data.answers)
-  )
-    return NextResponse.json(
-      { message: "Please complete the registration form." },
-      { status: 400 },
-    );
+  const result = z.object({ slug: z.string().max(200), consent: z.literal(true), share: z.literal(true), answers: z.record(z.string().max(100), z.string().max(10000)) }).safeParse(await readJson(request));
+  if (!result.success) return NextResponse.json({ message: "Please complete the registration form." }, { status: 400 });
+  const data = result.data;
+  const program = programs.find(p => p.slug === data.slug);
+  if (!program || !program.open) return NextResponse.json({ message: "This program is unavailable." }, { status: 400 });
   for (const q of program.questions) {
     const value = data.answers[q.id];
     if (
@@ -62,3 +54,5 @@ export async function POST(request: Request) {
     id: registration.id || registration.slug,
   });
 }
+
+export const POST = safeRoute("registrations", handler);

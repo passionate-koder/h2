@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./accounts.css";
 @import "./dashboard.css";
+@import "./marketplace.css";
 @theme {
   --color-primary: #21634b;
   --font-sans: "Europa Nuova", Arial, sans-serif;

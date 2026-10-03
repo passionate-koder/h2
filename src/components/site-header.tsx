@@ -51,8 +51,8 @@ export function SiteHeader() {
           <img src="/brand.svg" alt="Buildora" />
         </Link>
         <div className="hc-desktop-nav">
-          {user?<><Link href="/programs" className={pathname==='/programs'?'hc-nav-current':''}>All Programs</Link><Link href="/profile" className={pathname==='/profile'?'hc-nav-current':''}>Profile</Link><Link href="/my-events" className={pathname.startsWith('/my-events')?'hc-nav-current':''}>My Programs</Link></>:<>
-          <Link href="/programs">Programs</Link>
+          {user?<><Link href="/opportunities" className={pathname.startsWith('/opportunities')?'hc-nav-current':''}>Opportunities</Link><Link href="/applications" className={pathname.startsWith('/applications')?'hc-nav-current':''}>Applications</Link><Link href="/profile" className={pathname==='/profile'?'hc-nav-current':''}>Profile</Link></>:<>
+          <Link href="/opportunities">Opportunities</Link><Link href="/programs">Programs</Link>
           <div
             className="hc-menu-parent"
             onMouseEnter={() => setOpen("offerings")}
@@ -144,6 +144,7 @@ export function SiteHeader() {
       </nav>
       {mobile && (
         <nav className="hc-mobile-nav" aria-label="Mobile navigation">
+          <Link href="/opportunities">Opportunities</Link>
           <Link href="/programs">Programs</Link>
           <button
             onClick={() => setOpen(open === "offerings" ? null : "offerings")}
@@ -179,7 +180,7 @@ export function SiteHeader() {
                 Book a Call
               </a>
               <Link href="/host">Sales Inquiry</Link>
-              <a href="/programs">Join Ecosystem</a>
+              <Link href="/programs">Join Ecosystem</Link>
             </div>
           )}
           <Link href="/our-clientele">Our Clients</Link>

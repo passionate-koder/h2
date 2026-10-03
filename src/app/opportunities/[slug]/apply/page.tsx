@@ -1,0 +1,7 @@
+import { notFound, redirect } from "next/navigation";
+import { getIdentity, readAccount } from "@/lib/accounts";
+import { ApplicationForm } from "@/components/application-form";
+import { getOpportunity, listMyApplications } from "@/lib/marketplace/repository";
+export const metadata = { title: "Apply" };
+export default async function ApplyPage({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const identity = await getIdentity(); if (!identity) redirect(`/auth?redirect=${encodeURIComponent(`/opportunities/${slug}/apply`)}`); const opportunity = await getOpportunity(slug); if (!opportunity || !["job", "internship"].includes(opportunity.type)) notFound(); const [account, applications] = await Promise.all([readAccount(identity), listMyApplications(identity)]); const existing = applications.find(a => a.opportunityId === opportunity.id); if (existing && existing.status !== "draft") redirect(`/applications/${existing.id}`); return <main id="page-content" className="market-page market-narrow"><LinkBack slug={slug}/><h1>Apply for {opportunity.title}</h1><p>Your profile and resume details are included as a snapshot when you save or submit.</p><ApplicationForm slug={slug} questions={opportunity.questions} initialAnswers={existing?.answers || {}} profile={account.profile}/></main>; }
+function LinkBack({ slug }: { slug: string }) { return <a className="market-back" href={`/opportunities/${slug}`}>← Opportunity details</a>; }

@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { CalendarDays, BriefcaseBusiness } from "lucide-react";
 import { redirect } from "next/navigation";
-import { getAccountRole, readAccount } from "@/lib/accounts";
+import { getIdentity, readAccount } from "@/lib/accounts";
 import { AccountFooter } from "@/components/account-footer";
 import { Button } from "@/components/ui/button";
 import { MyPrograms } from "@/components/my-programs";
 export const metadata = { title: "My Programs" };
 export default async function Page() {
-  const role = await getAccountRole();
+  const role = await getIdentity();
   if (!role) redirect("/auth?redirect=/my-events");
   const { registrations } = await readAccount(role);
   return (

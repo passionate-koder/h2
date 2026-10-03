@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { getAccountRole, readAccount } from "@/lib/accounts";
+import { getIdentity, readAccount } from "@/lib/accounts";
 import { ProgramDashboard } from "@/components/program-dashboard";
 export const metadata = { title: "Program Dashboard" };
 export default async function Page({
@@ -8,7 +9,7 @@ export default async function Page({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const role = await getAccountRole();
+  const role = await getIdentity();
   if (!role)
     redirect("/auth?redirect=" + encodeURIComponent("/my-events/manage/" + id));
   const account = await readAccount(role);
@@ -21,7 +22,7 @@ export default async function Page({
       <main className="account-programs-page">
         <h1>{registration.name}</h1>
         <p>Your registration is complete.</p>
-        <a href="/my-events">Back to My Programs</a>
+        <Link href="/my-events">Back to My Programs</Link>
       </main>
     );
   return <ProgramDashboard registrationId={id} />;
