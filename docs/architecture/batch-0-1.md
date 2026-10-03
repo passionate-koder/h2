@@ -10,7 +10,7 @@ Pages and browser forms call API handlers and the accounts domain facade. `src/l
 
 Copy placeholders from `.env.example` into private environment configuration; do not replace existing `.env.local`. Both public Supabase variables select cloud mode; neither selects local mode. Partial configuration fails explicitly. `APP_ENV=staging` and `APP_ENV=production` require cloud authentication and an HTTPS site origin. `NODE_ENV=production` alone remains compatible with local production-build previews. Use distinct Supabase projects and site origins per deployed environment. Changing public variables requires rebuilding Next.js.
 
-Existing local hashes and session secrets continue to work. To create them, privately supply `HC_STUDENT_PASSWORD`/`HC_PRO_PASSWORD`, then run `node scripts/configure-local-accounts.mjs`. Login uses the email in each seeded content fixture; the `HC_*_EMAIL` variables are browser-test inputs rather than authoritative identity configuration. Local account files remain ignored. There are no generated or committed credentials. Email signup/verification/recovery return explicit unavailable responses in local mode, and the UI labels local persistence.
+Existing local hashes and session secrets continue to work. To create them, privately supply `BUILDORA_STUDENT_PASSWORD`/`BUILDORA_PRO_PASSWORD`, then run `node scripts/configure-local-accounts.mjs`. Login uses the email in each seeded content fixture; the `BUILDORA_*_EMAIL` variables are browser-test inputs rather than authoritative identity configuration. Local account files remain ignored. There are no generated or committed credentials. Email signup/verification/recovery return explicit unavailable responses in local mode, and the UI labels local persistence.
 
 ## Supabase setup
 

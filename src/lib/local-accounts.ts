@@ -57,7 +57,7 @@ export function seedProfile(role: AccountRole): AccountProfile {
   };
 }
 function signature(value: string) {
-  const secret = process.env.HC_SESSION_SECRET;
+  const secret = process.env.BUILDORA_SESSION_SECRET;
   if (!secret)
     throw new Error("Local account session secret is not configured");
   return createHmac("sha256", secret).update(value).digest("base64url");
@@ -90,8 +90,8 @@ export async function signIn(email: string, password: string) {
   if (!role) return null;
   const value =
     role === "student"
-      ? process.env.HC_STUDENT_PASSWORD_HASH
-      : process.env.HC_PRO_PASSWORD_HASH;
+      ? process.env.BUILDORA_STUDENT_PASSWORD_HASH
+      : process.env.BUILDORA_PRO_PASSWORD_HASH;
   if (!value) return null;
   const [salt, hash] = value.split(":");
   const actual = scryptSync(password, salt, 64);
@@ -108,7 +108,7 @@ export async function signIn(email: string, password: string) {
   (await cookies()).set(cookieName, payload + "." + signature(payload), {
     httpOnly: true,
     sameSite: "lax",
-    secure: process.env.HC_COOKIE_SECURE === "true",
+    secure: process.env.BUILDORA_COOKIE_SECURE === "true",
     path: "/",
     maxAge: 7 * 86400,
   });

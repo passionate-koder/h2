@@ -11,7 +11,7 @@ import { seededOpportunities } from "./seed";
 import { canTransition, canWithdraw, deadlineState, evaluateEligibility, filterOpportunities, validateAnswers } from "./domain";
 import type { Application, ApplicationStatus, MarketplaceStore, Opportunity, OpportunityQuery } from "./types";
 
-const root = path.resolve(process.env.HC_LOCAL_DATA_DIR || ".local-data");
+const root = path.resolve(process.env.BUILDORA_LOCAL_DATA_DIR || ".local-data");
 const storeFile = path.join(root, "marketplace.json");
 let lock = Promise.resolve();
 const emptyStore = (): MarketplaceStore => ({ saved: [], applications: [] });

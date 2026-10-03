@@ -44,9 +44,9 @@ Development output uses `.next-dev/`; production builds use `.next/`.
 
 ## Local accounts
 
-Keep `.env.local` private. Existing authentication uses `HC_SESSION_SECRET`, `HC_STUDENT_EMAIL`, `HC_STUDENT_PASSWORD_HASH`, `HC_PRO_EMAIL`, and `HC_PRO_PASSWORD_HASH`. These configuration names remain compatible with existing local installations.
+Keep `.env.local` private. Local authentication uses `BUILDORA_SESSION_SECRET`, `BUILDORA_STUDENT_PASSWORD_HASH`, and `BUILDORA_PRO_PASSWORD_HASH`. Browser checks also use `BUILDORA_STUDENT_EMAIL` and `BUILDORA_PRO_EMAIL`. Existing installations must rename older environment keys to the `BUILDORA_` names; the old names are no longer read.
 
-To configure password hashes, provide `HC_STUDENT_PASSWORD` and `HC_PRO_PASSWORD` through environment variables and run `node scripts/configure-local-accounts.mjs`. The script writes password hashes and a session secret to `.env.local`.
+To configure password hashes, provide `BUILDORA_STUDENT_PASSWORD` and `BUILDORA_PRO_PASSWORD` through environment variables and run `node scripts/configure-local-accounts.mjs`. The script writes password hashes and a session secret to `.env.local`.
 
 Account changes, registrations, and hosting inquiries persist in the ignored `.local-data/` directory. PDF resumes retain the existing private inline data representation. Local account creation and reset email delivery are unavailable; configured Supabase enables email authentication, verification and recovery. OAuth and live project submissions remain outside this slice. Contact and booking actions use the local hosting inquiry flow.
 

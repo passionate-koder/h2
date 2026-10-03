@@ -19,5 +19,5 @@ if (url && serviceKey) {
   }
   console.log(`Imported ${opportunities.length} opportunities to Supabase (idempotent by slug).`);
 } else {
-  const directory = path.resolve(process.env.HC_LOCAL_DATA_DIR || ".local-data"); await fs.mkdir(directory, { recursive: true }); const target = path.join(directory, "opportunities-import.json"); await fs.writeFile(target, JSON.stringify(opportunities, null, 2), { mode: 0o600 }); console.log(`Imported ${opportunities.length} opportunities to ${target} (replaced atomically by source identity).`);
+  const directory = path.resolve(process.env.BUILDORA_LOCAL_DATA_DIR || ".local-data"); await fs.mkdir(directory, { recursive: true }); const target = path.join(directory, "opportunities-import.json"); await fs.writeFile(target, JSON.stringify(opportunities, null, 2), { mode: 0o600 }); console.log(`Imported ${opportunities.length} opportunities to ${target} (replaced atomically by source identity).`);
 }

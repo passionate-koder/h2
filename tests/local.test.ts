@@ -14,7 +14,7 @@ const identity = { id: seedProfile("student").uid, email: seedProfile("student")
 beforeEach(() => {
   mocks.files.clear(); mocks.cookie = undefined;
   vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", ""); vi.stubEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY", ""); vi.stubEnv("APP_ENV", "local");
-  vi.stubEnv("HC_SESSION_SECRET", "unit-test-secret"); vi.stubEnv("HC_STUDENT_PASSWORD_HASH", "salt:" + scryptSync("test-password", "salt", 64).toString("hex"));
+  vi.stubEnv("BUILDORA_SESSION_SECRET", "unit-test-secret"); vi.stubEnv("BUILDORA_STUDENT_PASSWORD_HASH", "salt:" + scryptSync("test-password", "salt", 64).toString("hex"));
 });
 describe("local fallback", () => {
   it("retains seeds and persists isolated accounts with server audit events", async () => {

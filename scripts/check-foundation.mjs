@@ -14,7 +14,7 @@ for (const file of [".local-data/accounts/student.json", ".local-data/accounts/p
 }
 // Never reuse a server that might hold different credentials or overwrite its configuration.
 try { await fetch(base, { signal: AbortSignal.timeout(1500) }); throw new Error("Port 3100 is already in use. Stop that server before this isolated check."); } catch (error) { if (error.message.startsWith("Port")) throw error; }
-const server = spawn(process.execPath, ["node_modules/next/dist/bin/next", "start", "--port", "3100"], { windowsHide: true, env: { ...process.env, APP_ENV: "local", NEXT_PUBLIC_SUPABASE_URL: "", NEXT_PUBLIC_SUPABASE_ANON_KEY: "", HC_SESSION_SECRET: randomBytes(48).toString("hex"), HC_STUDENT_PASSWORD_HASH: hash, HC_PRO_PASSWORD_HASH: hash, HC_COOKIE_SECURE: "false" }, stdio: "ignore" });
+const server = spawn(process.execPath, ["node_modules/next/dist/bin/next", "start", "--port", "3100"], { windowsHide: true, env: { ...process.env, APP_ENV: "local", NEXT_PUBLIC_SUPABASE_URL: "", NEXT_PUBLIC_SUPABASE_ANON_KEY: "", BUILDORA_SESSION_SECRET: randomBytes(48).toString("hex"), BUILDORA_STUDENT_PASSWORD_HASH: hash, BUILDORA_PRO_PASSWORD_HASH: hash, BUILDORA_COOKIE_SECURE: "false" }, stdio: "ignore" });
 const exited = new Promise(resolve => server.once("exit", resolve));
 let browser;
 async function run(command, args) {

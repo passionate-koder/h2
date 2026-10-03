@@ -1,0 +1,7 @@
+import { PGlite } from "@electric-sql/pglite";
+import { readFile } from "node:fs/promises";
+import { afterAll, beforeAll, expect, it } from "vitest";
+const db=new PGlite();
+beforeAll(async()=>{await db.exec(`create role anon; create role authenticated; create schema auth; create table auth.users(id uuid primary key,email text,raw_user_meta_data jsonb default '{}'); create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$; grant usage on schema auth to anon,authenticated; grant execute on function auth.uid() to anon,authenticated;`);for(const name of ["202610020001_identity.sql","202610020002_marketplace_applications.sql","202610020003_events_assessments.sql"]) await db.exec(await readFile(`supabase/migrations/${name}`,"utf8"));},30000);
+afterAll(async()=>db.close());
+it("creates the event schema with closed direct access",async()=>{const tables=(await db.query<{tablename:string}>("select tablename from pg_tables where schemaname='public' and tablename in ('verification_cases','competitions','assessment_attempts','assessment_options')")).rows;expect(tables).toHaveLength(4);await db.exec("set role authenticated");try{await expect(db.query("select * from public.assessment_options")).rejects.toThrow();await expect(db.query("select * from public.verification_evidence")).rejects.toThrow();}finally{await db.exec("reset role")}});

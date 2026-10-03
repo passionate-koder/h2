@@ -7,8 +7,8 @@
   --font-sans: "Europa Nuova", Arial, sans-serif;
 }
 :root {
-  --hc-primary: #21634b;
-  --hc-ink: #192c24;
+  --buildora-primary: #21634b;
+  --buildora-ink: #192c24;
 }
 html {
   scroll-behavior: smooth;

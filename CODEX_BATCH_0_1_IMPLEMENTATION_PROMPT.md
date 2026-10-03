@@ -151,7 +151,7 @@ SUPABASE_SERVICE_ROLE_KEY=
 NEXT_PUBLIC_SITE_URL=http://localhost:3100
 ```
 
-Keep existing `HC_*` variables documented if the local adapter still needs them. Do not create or commit a real `.env.local` containing secrets.
+Keep existing `BUILDORA_*` variables documented if the local adapter still needs them. Do not create or commit a real `.env.local` containing secrets.
 
 If Supabase variables are absent:
 
